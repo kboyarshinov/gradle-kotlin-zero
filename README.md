@@ -10,6 +10,11 @@ following features:
   and [plugin repositories](gradle/plugin-repositories.gradle.kts).
 - typesafe project accessors enabled.
 - stable configuration cache enabled.
+- sample starter modules for:
+  - plain kotlin library
+  - kotlin multiplatform library
+  - kotlin Android library
+  - kotlin Android app
 
 You may want to use this template when you need just Gradle setup and don't want to remove
 all the empty classes, resource files or rename packages.
