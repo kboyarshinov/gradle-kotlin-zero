@@ -12,6 +12,9 @@ kotlin {
 dependencies {
     implementation(libs.kotlin.common)
     implementation(libs.kotlin.stdlib)
+
+    testImplementation(libs.testing.kotlin.test.common)
+    testImplementation(libs.testing.kotlin.test.junit)
 }
 
 java {
