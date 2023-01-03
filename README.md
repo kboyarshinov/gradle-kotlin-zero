@@ -11,6 +11,9 @@ following features:
 - typesafe project accessors enabled.
 - stable configuration cache enabled.
 
+You may want to use this template when you need just Gradle setup and don't want to remove
+all the empty classes, resource files or rename packages.
+
 # License
 
     Copyright 2023 Kirill Boyarshinov

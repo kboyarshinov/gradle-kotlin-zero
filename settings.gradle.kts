@@ -16,3 +16,5 @@ rootProject.name = "gradle-kotlin-empty-template"
 // modules to include
 include(":kotlin-lib")
 include(":kotlin-multiplatform-lib")
+include(":kotlin-android-app")
+include(":kotlin-android-lib")

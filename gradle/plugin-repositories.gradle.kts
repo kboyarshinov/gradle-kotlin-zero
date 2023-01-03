@@ -19,6 +19,9 @@ pluginManagement {
             filter {
                 includeGroupByRegex("com\\.android.*")
                 includeGroupByRegex("androidx.*")
+
+                // needed for Android Gradle Plugin
+                includeGroup("com.google.testing.platform")
             }
         }
 
