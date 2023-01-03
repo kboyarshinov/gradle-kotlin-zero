@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    // OPTIONAL: remove if kapt is unused
+    alias(libs.plugins.kotlin.kapt)
 }
 
 kotlin {
