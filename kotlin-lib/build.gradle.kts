@@ -3,6 +3,7 @@ plugins {
 }
 
 kotlin {
+    // libraries should have explicit API by default
     explicitApi()
 }
 

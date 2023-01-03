@@ -3,10 +3,16 @@ plugins {
 }
 
 kotlin {
+    // libraries should have explicit API by default
     explicitApi()
 
     // targets
-    jvm()
+    jvm {
+        // configure JVM tests to run on JUnit
+        testRuns["test"].executionTask.configure {
+            useJUnitPlatform()
+        }
+    }
 
     // source sets & their configuration
     sourceSets {
@@ -17,6 +23,10 @@ kotlin {
             }
         }
         val jvmMain by getting
-        val jvmTest by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation(libs.testing.kotlin.test.junit)
+            }
+        }
     }
 }

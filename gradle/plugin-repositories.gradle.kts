@@ -1,7 +1,7 @@
 // Declare repositories for plugins
 pluginManagement {
     repositories {
-        // Allow Gradle and Jetbrains plugins portal
+        // Allow Gradle and Jetbrains plugins from Gradle plugin portal
         exclusiveContent {
             forRepository { gradlePluginPortal() }
 
