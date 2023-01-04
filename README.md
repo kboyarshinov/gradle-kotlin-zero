@@ -1,13 +1,14 @@
 # Empty Gradle template for Kotlin based projects 
 
-This is a completely empty (no kotlin code) Gradle project template for Kotlin, Kotlin multiplatform
-and Android. It only contains Gradle configuration with `.gradle.kts` files and includes the
-following features:
+This is a completely empty (no Kotlin code) Gradle project template for Kotlin,
+Kotlin multiplatform and Android. It only contains Gradle configuration with
+Gradle Kotlin DSL and includes the following features:
 
-- shared version catalogue for libraries in
-  default [`gradle/libs.versions.toml`](gradle/libs.versions.toml).
-- separate configuration files for [library repositories](gradle/repositories.gradle.kts)
-  and [plugin repositories](gradle/plugin-repositories.gradle.kts).
+- shared version catalogue for libraries in default
+  [`gradle/libs.versions.toml`](gradle/libs.versions.toml).
+- separate configuration files for [library
+  repositories](gradle/repositories.gradle.kts) and [plugin
+  repositories](gradle/plugin-repositories.gradle.kts).
 - typesafe project accessors enabled.
 - stable configuration cache enabled.
 - sample starter modules for:
@@ -16,8 +17,19 @@ following features:
   - kotlin Android library
   - kotlin Android app
 
-You may want to use this template when you need just Gradle setup and don't want to remove
-all the empty classes, resource files or rename packages.
+You may want to use this template when you need just Gradle setup and don't
+want to remove all the empty classes, resource files or rename packages.
+
+## How to use this template
+
+After setting up new project with this template you might want to do one or
+more of:
+
+- changing `rootProject.name` in [settings.gradle.kts](settings.gradle.kts).
+- removing/changing [license file](LICENSE.txt) and license info in this
+  README.
+- replacing README content with your project information.
+- decide what sample modules you'd want to keep or remove them all completely.
 
 # License
 

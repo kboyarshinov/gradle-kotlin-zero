@@ -11,7 +11,7 @@ apply(file("gradle/plugin-repositories.gradle.kts"))
 // apply common repository configuration
 apply(file("gradle/repositories.gradle.kts"))
 
-rootProject.name = "gradle-kotlin-empty-template"
+rootProject.name = "gradle-kotlin-zero"
 
 // modules to include
 include(":kotlin-lib")
