@@ -23,13 +23,12 @@ want to remove all the empty classes, resource files or rename packages.
 
 ## How to use this template
 
-After setting up new project with this template you might want to do one or
-more of:
+Run [`setup.sh`](setup.sh) and enter your project name to do the following:
 
-- changing `rootProject.name` in [settings.gradle.kts](settings.gradle.kts).
-- removing/changing [license file](LICENSE.txt) and license info in this
-  README.
-- replacing README content with your project information.
+- change `rootProject.name` in [settings.gradle.kts](settings.gradle.kts) to your name.
+- remove [license file](LICENSE.txt) and license info in this
+  README or update copyright info with your git username.
+- replace README content with your project title.
 - decide what sample modules you'd want to keep or remove them all completely.
 
 # License

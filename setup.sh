@@ -37,11 +37,14 @@ echo "Configuring project '$projectName'..."
 
 # update license if it's not deleted
 if [[ -e LICENSE.txt ]]; then
-    sed -i 's/^   Copyright.*/   Copyright "$(date +%Y)" "$(git config --global --get user.name)"/g' ./LICENSE.txt
+    date=$(date +%Y)
+    gitUser=$(git config --global --get user.name)
+    awk -v date=$date -v name="$gitUser" '{ gsub(/^   Copyright.*$/,"   Copyright " date " " name); print }' LICENSE.txt > tmp && mv tmp LICENSE.txt
 fi
 
 # change root project name
-sed -i "s/^rootProject.name = \"[a-zA-Z-_0-9]+\"$/rootProject.name = \"$projectName\"/g" ./settings.gradle.kts
+awk -v name=$projectName '{ gsub(/^rootProject\.name\ =\ [a-zA-Z-"]+$/,"rootProject.name = \"" name "\""); print }' settings.gradle.kts > tmp && mv tmp settings.gradle.kts
+#sed -i "s/^rootProject.name = \"[a-zA-Z-_0-9]+\"$/rootProject.name = \"$projectName\"/g" ./settings.gradle.kts
 
 # update readme
 rm README.md
