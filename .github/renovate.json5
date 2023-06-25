@@ -42,19 +42,8 @@
       matchPackagePatterns: [
         "^org.jetbrains.kotlin",
         "com.google.devtools.ksp",
-        "org.jetbrains.compose",
-        "androidx.compose.compiler"
       ],
-      groupName: "Kotlin and Compose Compiler"
-    },
-    {
-      matchPackagePatterns: [
-        "androidx.compose.runtime",
-        "androidx.compose.ui",
-        "androidx.compose.foundation",
-        "androidx.compose.material"
-      ],
-      groupName: "Compose"
+      groupName: "Kotlin Compiler"
     }
   ]
 }
