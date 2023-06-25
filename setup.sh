@@ -49,5 +49,15 @@ awk -v name=$projectName '{ gsub(/^rootProject\.name\ =\ [a-zA-Z-"]+$/,"rootProj
 rm README.md
 echo "# $projectName" >> README.md
 
+# remove renovate config
+rm .github/renovate.json5
+
+read -p "Do you want to remove GitHub actions config (y/n)? " answer
+case ${answer:0:1} in
+    y|Y )
+        rm -rf .github
+    ;;
+esac
+
 echo "Project '$projectName' configured. Changes can be committed."
 exit 0
