@@ -1,7 +1,7 @@
 [versions]
 # tools & plugins
 kotlin = "1.9.10"
-android-gradle = "8.1.1"
+android-gradle = "8.1.2"
 
 # android's compileSdk, targetSdk, minSdk
 android-compile = "33"
