@@ -4,8 +4,8 @@ kotlin = "1.9.20"
 android-gradle = "8.1.4"
 
 # android's compileSdk, targetSdk, minSdk
-android-compile = "33"
-android-target = "33"
+android-compile = "34"
+android-target = "34"
 android-min = "28"
 
 # libraries
