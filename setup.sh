@@ -44,6 +44,7 @@ fi
 
 # change root project name
 awk -v name=$projectName '{ gsub(/^rootProject\.name\ =\ [a-zA-Z-"]+$/,"rootProject.name = \"" name "\""); print }' settings.gradle.kts > tmp && mv tmp settings.gradle.kts
+awk -v name=$projectName '{ gsub(/^rootProject\.name\ =\ [a-zA-Z-"]+$/,"rootProject.name = \"" name "\""); print }' buildSrc/settings.gradle.kts > tmp && mv tmp buildSrc/settings.gradle.kts
 
 # update readme
 rm README.md
