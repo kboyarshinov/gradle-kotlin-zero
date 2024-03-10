@@ -17,6 +17,8 @@ Gradle Kotlin DSL and includes the following features:
   - kotlin Android library
   - kotlin Android app
 - `buildSrc` folder for shared Gradle functions and tasks.
+- basic GitHub Actions workflow to run 'Build' tasks
+- simple renovate configuration
 
 You may want to use this template when you need just Gradle setup and don't
 want to remove all the empty classes, resource files or rename packages.
