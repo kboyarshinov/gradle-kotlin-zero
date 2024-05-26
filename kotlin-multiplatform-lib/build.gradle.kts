@@ -13,6 +13,10 @@ kotlin {
             useJUnitPlatform()
         }
     }
+    iosX64()
+    macosX64()
+    linuxX64()
+    linuxArm64()
 
     // source sets & their configuration
     sourceSets {
