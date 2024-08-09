@@ -1,6 +1,6 @@
 [versions]
 # tools & plugins
-kotlin = "2.0.0"
+kotlin = "2.0.10"
 android-gradle = "8.5.1"
 
 # android's compileSdk, targetSdk, minSdk
