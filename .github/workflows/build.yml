@@ -24,9 +24,7 @@ jobs:
           java-version: 25
 
       - name: Install Android SDK
-        uses: android-actions/setup-android@v4
-        with:
-          cmdline-tools-version: 1474292
+        run: ./.github/android-sdk.sh
 
       - uses: gradle/gradle-build-action@v3
 
