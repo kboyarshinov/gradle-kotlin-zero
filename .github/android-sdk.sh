@@ -2,7 +2,7 @@
 set -e
 
 # v20.0
-CMDLINE_TOOLS_VERSION=1474292
+CMDLINE_TOOLS_VERSION=14742923
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   CMDLINE_TOOLS_OS="linux"
