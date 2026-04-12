@@ -9,3 +9,6 @@ local.properties
 
 # MacOS
 .DS_STORE
+
+# kotlin
+.kotlin/

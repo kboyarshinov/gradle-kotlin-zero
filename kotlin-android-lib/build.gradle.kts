@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.lib)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -10,13 +9,12 @@ android {
     defaultConfig {
         minSdk = libs.versions.android.min.get().toInt()
     }
+}
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+kotlin {
+    compilerOptions {
+        languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_2
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_18
     }
 }
 
