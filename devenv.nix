@@ -18,7 +18,7 @@
 
   # https://devenv.sh/tasks/
   tasks = {
-    "gradle:build".exec = "gradle build";
+    "gradle:build".exec = "gradle build --stacktrace";
   };
 
   # https://devenv.sh/tests/
