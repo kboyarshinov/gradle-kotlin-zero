@@ -1,8 +1,10 @@
 # yaml-language-server: $schema=https://devenv.sh/devenv.schema.json
 inputs:
+  nixos-stable:
+    url: github:NixOS/nixpkgs/nixos-26.05
   nixpkgs:
     url: github:cachix/devenv-nixpkgs/rolling
-
+    follows: nixos-stable
 # android
 allow_unfree: true
 
