@@ -13,20 +13,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
-      - name: Gradle Wrapper Validation
-        uses: gradle/actions/wrapper-validation@v6
-
-      - name: Install JDK
-        uses: actions/setup-java@v5
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
         with:
-          distribution: zulu
-          java-version: 25
-
-      - name: Install Android SDK
-        run: ./.github/android-sdk.sh
-
-      - uses: gradle/gradle-build-action@v3
-
+          nix_path: nixpkgs=channel:nixos-unstable
+      - name: Configure cache
+        uses: nix-community/cache-nix-action@v7
+        with:
+          primary-key: ${{ runner.os }}-gradle-nix-${{ hashFiles('**/*.gradle*', '**/*.nix', '**/*.lock') }}
+          restore-prefixes-first-match: |
+            ${{ runner.os }}-gradle-nix-
+          paths: |
+            .gradle/caches
+      - name: Install devenv.sh
+        run: nix profile add nixpkgs#devenv
+      - name: Build the devenv shell
+        run: devenv test
       - name: Build with Gradle
-        run: ./gradlew build --stacktrace
+        run: devenv tasks run gradle:build
