@@ -30,4 +30,4 @@ jobs:
       - name: Build the devenv shell
         run: devenv test
       - name: Build with Gradle
-        run: devenv tasks run gradle:build
+        run: devenv tasks run gradlew:build

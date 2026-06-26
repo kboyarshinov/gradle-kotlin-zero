@@ -7,8 +7,7 @@
   # https://devenv.sh/languages/
   languages.java.enable = true;
   languages.java.jdk.package = pkgs.zulu25;
-  languages.java.gradle.enable = true;
-  languages.java.gradle.package = pkgs.gradle_9;
+  languages.java.gradle.enable = false;
 
   # https://devenv.sh/basics/
   enterShell = ''
@@ -18,14 +17,13 @@
 
   # https://devenv.sh/tasks/
   tasks = {
-    "gradle:build".exec = "gradle build --stacktrace";
+    "gradlew:build".exec = "./gradlew build --stacktrace";
   };
 
   # https://devenv.sh/tests/
   enterTest = ''
     echo "Running tests"
     java --version | grep --color=auto "Zulu$(echo ${pkgs.zulu25.version}| awk -F '.' '{print $1}')"
-    gradle --version | grep --color=auto "Gradle ${pkgs.gradle_9.version}"
   '';
 
  android = {
